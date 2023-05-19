@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- reset.css 적용하면 브라우저에서 적용되는 스타일 모두 제거된다. -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/app.js" defer></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>오늘의 날씨</h1>
+    <h2>오늘의 날씨</h2>
+    <h3>오늘의 날씨</h3>
+    <img src="./img/storm.png" alt="태풍 이미지" />
+    <ul>
+      <li>사과</li>
+      <li>딸기</li>
+      <li>수박</li>
+      <li>오렌지</li>
+    </ul>
+    <a href="https://www.nate.com/" target="_blank" title="네이트로 이동"
+      >NATE</a
+    >
+    <a href="https://www.google.co.kr/">GOOGLE</a>
+    <!-- span : wrapping 래핑 -->
+    <p>
+      <span>구구콘</span> 아이스크림
+      <br />
+      구구콘 아이스크림
+    </p>
+    <input type="text" placeholder="FAST CAMPUS" disabled />
+    <!-- 글자만 체크해도 체크박스가 해제되는 것을 알 수 있다. -->
+    <label><input type="checkbox" checked /> Apple </label>
+    <label><input type="checkbox" />Banana</label>
+    <!-- 라디오 버튼은 택 1 가능하다. -->
+    <label><input type="radio" checked name="fruits" /> Apple </label>
+    <label><input type="radio" name="fruits" />Banana</label>
+    <!-- 테이블 -->
+    <table>
+      <tr>
+        <td>(1, 1)</td>
+        <td>(1, 2)</td>
+        <td>(1, 3)</td>
+      </tr>
+      <tr>
+        <td>(2, 1)</td>
+        <!-- 병합하는 방법 있다. -->
+        <td colspan="2">(2, 2)</td>
+      </tr>
+    </table>
+    <div data-fruit-name="apple">사과</div>
+    <div data-fruit-name="banana">바나나</div>
+  </body>
+</html>
