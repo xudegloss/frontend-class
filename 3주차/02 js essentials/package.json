@@ -1,7 +1,6 @@
 {
   "name": "02-js-essentials",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "parcel index.html",
@@ -12,5 +11,6 @@
   "license": "ISC",
   "devDependencies": {
     "parcel-bundler": "^1.12.5"
-  }
+  },
+  "description": ""
 }
