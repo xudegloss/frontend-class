@@ -34,20 +34,21 @@ fruits.forEach(function (element, index, array) {
 
 // map
 
-const a = fruits.forEach(function (fruit, index) {
+const a = fruits.forEach((fruit, index) => {
   console.log(`${fruit}-${index}`);
 });
 
 console.log(a); // 반환되는 값이 없다.
 
-const b = fruits.map(function (fruit, index) {
+const b = fruits.map((fruit, index) => {
   // 객체로 반환하는 방법
-  // * 많이 사용되는 방법
+  // * 많이 사용되는 방법);
 
-  return {
+  ({
     id: index,
     name: fruit,
-  }; // 반환 (forEach와 가장 큰 차이점)
+  });
+  // 반환되는 값이 있다. (forEach와 가장 큰 차이점)
 });
 
 console.log(b); // 반환된 값은 배열로 반환된다.
