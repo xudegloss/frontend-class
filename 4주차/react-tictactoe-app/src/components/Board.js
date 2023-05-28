@@ -3,10 +3,19 @@ import Square from "./Square";
 import "./Board.css";
 
 export default class Board extends Component {
+  // 초기 지정하기.
+  // State 의미한다.
+  constructor(props) {
+    super(props);
+    this.state = {
+      squares: Array(9).fill(null),
+    };
+  }
+
   // renderSquare 함수 : Square Component 가져오기.
   // 반복성이 높아서, Square 자체를 Component로 제작한 것이다.
-  renderSquare() {
-    return <Square />;
+  renderSquare(i) {
+    return <Square value={this.state.squares[i]} />;
   }
 
   // this는 class Board를 가르킨다.
