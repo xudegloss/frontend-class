@@ -5,6 +5,7 @@ import "./Board.css";
 export default class Board extends Component {
   // 초기 지정하기.
   // State 의미한다.
+
   constructor(props) {
     super(props);
     this.state = {
@@ -12,10 +13,23 @@ export default class Board extends Component {
     };
   }
 
+  handleClick = (i) => {
+    const newSquares = this.state.squares.slice();
+    newSquares[i] = "X";
+    this.setState({ squares: newSquares });
+  };
+
   // renderSquare 함수 : Square Component 가져오기.
   // 반복성이 높아서, Square 자체를 Component로 제작한 것이다.
+
   renderSquare(i) {
-    return <Square value={this.state.squares[i]} />;
+    return (
+      <Square
+        value={this.state.squares[i]}
+        // 함수도 props로 내려줄 수 있다.
+        onClick={() => this.handleClick(i)}
+      />
+    );
   }
 
   // this는 class Board를 가르킨다.
